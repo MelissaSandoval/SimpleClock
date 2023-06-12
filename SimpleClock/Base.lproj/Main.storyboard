@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-Kc-0Db">
+                                <rect key="frame" x="0.0" y="59" width="430" height="873"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIu-sP-Dja">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="207"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun, 11 June 2023 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1E-IY-xeF">
+                                                <rect key="frame" x="61.333333333333343" y="88.666666666666657" width="307.33333333333326" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="k1E-IY-xeF" firstAttribute="centerY" secondItem="cIu-sP-Dja" secondAttribute="centerY" id="9GK-oB-df2"/>
+                                            <constraint firstItem="k1E-IY-xeF" firstAttribute="centerX" secondItem="cIu-sP-Dja" secondAttribute="centerX" id="uSa-M9-xvs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thB-4B-NOc">
+                                        <rect key="frame" x="0.0" y="222" width="430" height="207"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUR-Xa-QSp">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="207"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="centerY" secondItem="thB-4B-NOc" secondAttribute="centerY" id="0Wy-rY-H5K"/>
+                                            <constraint firstAttribute="bottom" secondItem="qUR-Xa-QSp" secondAttribute="bottom" id="3re-Qy-M5P"/>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="centerX" secondItem="thB-4B-NOc" secondAttribute="centerX" id="7ju-t2-Sga"/>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="centerX" secondItem="thB-4B-NOc" secondAttribute="centerX" id="BCZ-ck-bZo"/>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="centerY" secondItem="thB-4B-NOc" secondAttribute="centerY" id="K7A-mk-TGf"/>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="top" secondItem="thB-4B-NOc" secondAttribute="top" id="MK7-Kf-ph4"/>
+                                            <constraint firstItem="qUR-Xa-QSp" firstAttribute="leading" secondItem="thB-4B-NOc" secondAttribute="leading" id="OhM-rA-1Sv"/>
+                                            <constraint firstAttribute="trailing" secondItem="qUR-Xa-QSp" secondAttribute="trailing" id="pat-0b-z1M"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJQ-Pa-DkX">
+                                        <rect key="frame" x="0.0" y="444" width="430" height="207"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wy-7h-FVZ">
+                                                <rect key="frame" x="143" y="82.666666666666629" width="144.33333333333337" height="41.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start Timer">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0">
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAM-Jj-LOh"/>
+                                                    <action selector="timerStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXk-hk-t20"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2Wy-7h-FVZ" firstAttribute="centerX" secondItem="RJQ-Pa-DkX" secondAttribute="centerX" id="ZVx-Q1-MH1"/>
+                                            <constraint firstItem="2Wy-7h-FVZ" firstAttribute="centerY" secondItem="RJQ-Pa-DkX" secondAttribute="centerY" id="vLb-J4-R54"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IyL-Ui-Liv">
+                                        <rect key="frame" x="0.0" y="666" width="430" height="207"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-1G-S91">
+                                                <rect key="frame" x="103.33333333333333" y="92" width="223.66666666666669" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NVH-1G-S91" firstAttribute="centerX" secondItem="IyL-Ui-Liv" secondAttribute="centerX" id="In2-vG-VdX"/>
+                                            <constraint firstItem="NVH-1G-S91" firstAttribute="centerY" secondItem="IyL-Ui-Liv" secondAttribute="centerY" id="yfv-us-IXZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cIu-sP-Dja" firstAttribute="centerX" secondItem="LW6-Kc-0Db" secondAttribute="centerX" id="aa3-YU-HGj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LW6-Kc-0Db" secondAttribute="trailing" id="Hhu-mc-qy8"/>
+                            <constraint firstItem="LW6-Kc-0Db" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yux-ya-Gyv"/>
+                            <constraint firstAttribute="bottom" secondItem="LW6-Kc-0Db" secondAttribute="bottom" id="deQ-r6-9aG"/>
+                            <constraint firstItem="LW6-Kc-0Db" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hWT-2d-EC6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="2Wy-7h-FVZ" id="IqW-oc-Gca"/>
+                        <outlet property="buttonLabel" destination="2Wy-7h-FVZ" id="M9f-Hc-2Tq"/>
+                        <outlet property="currentTime" destination="k1E-IY-xeF" id="ev6-wF-G9f"/>
+                        <outlet property="startButton" destination="2Wy-7h-FVZ" id="ZIK-uO-lwm"/>
+                        <outlet property="timeRemaining" destination="NVH-1G-S91" id="SWf-wK-dhF"/>
+                        <outlet property="timeSelected" destination="qUR-Xa-QSp" id="w23-Az-c2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.40845070422536" y="3.8167938931297707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
